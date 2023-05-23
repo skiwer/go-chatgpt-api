@@ -8,5 +8,5 @@ WORKDIR /app
 COPY --from=builder /app/go-chatgpt-api .
 RUN apk add --no-cache tzdata
 ENV TZ=Asia/Shanghai
-EXPOSE 8080
+EXPOSE $PORT
 CMD ["/app/go-chatgpt-api"]
